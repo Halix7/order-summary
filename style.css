@@ -129,6 +129,10 @@ body {
     flex-direction: column;
 }
 
+.footer {
+    margin-top: 0.3rem;
+}
+
 .button span:first-child {
     border-radius: 15px;
     color: var(--Very-pale-blue);
