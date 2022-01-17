@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;0,700;0,900;1,700;1,900&display=swap');
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* The designs were created to the following widths: */
+    --Mobile: 375px;
+    /* ## Colors */
+    /* ### Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    /* ### Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    /* ## Typography */
+    /* ### Body Copy */
+    --Font-size-paragraph-: 16px;
+    /* ### Font */
+    --Family: 'Red Hat Display', sans-serif;
+    --Weights1: 500;
+    --Weights2: 700;
+    --Weights3: 900;
+}
+
+body {
+    background-image: url('images/pattern-background-desktop.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: var(--Family);
+    background-color: var(--Pale-blue);
+    color: var(--Dark-blue);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.box {
+    width: 350px;
+    height: 450px;
+    background-color: var(--Very-pale-blue);
+    border-radius: 15px;
+    box-shadow: 2px 10px 15px 2px var(--Desaturated-blue);
+}
+
+.img {
+    width: 100%;
+    height: 30%;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.head h1 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.head p {
+    font-size: var(--Font-size-paragraph-);
+    color: var(--Desaturated-blue);
+}
+
+.center {
+    margin-top: 0.2rem;
+    background-color: var(--Very-pale-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
+.center>a:hover {
+    text-decoration: none;
+}
+
+.center-mid {
+    margin: 0.5rem;
+    margin-right: 4.5rem;
+    margin-left: 1rem;
+}
+
+.center-mid h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.center-mid span {
+    color: var(--Desaturated-blue);
+    font-size: var(--Font-size-paragraph-);
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+}
+
+.button span:first-child {
+    border-radius: 15px;
+    color: var(--Very-pale-blue);
+    background-color: var(--Dark-blue);
+    cursor: pointer;
+    font-weight: 500;
+    padding-block: 1rem;
+    padding-inline: 5.2rem;
+    /* box-shadow: 2px 10px 10px 3px red; */
+    box-shadow: 2px 10px 10px 3px var(--Pale-blue);
+}
+
+.button span:first-child:hover {
+    background-color: var(--Bright-blue);
+}
+
+.button span:last-child {
+    text-align: center;
+    padding-block: 1rem;
+    padding-inline: 5.2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width:var(--Mobile)) {
+    body {
+        background-image: url('/images/pattern-background-mobile.svg');
+    }
+    .box {
+        height: 521px;
+    }
+}
